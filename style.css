@@ -1,0 +1,157 @@
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+.title {
+  font-family: 'Bowlby One SC', sans-serif;
+  font-size: 3rem;
+  color: #ffc107;
+  text-shadow: 2px 2px 0 #00000060;
+  animation: popIn 1s ease-out;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+#word-box {
+  background: linear-gradient(145deg, #6c757d, #495057);
+  padding: 1.2rem 2rem;
+  border-radius: 1rem;
+  display: inline-block;
+  box-shadow: 0 0 20px #00000050;
+  animation: fadeIn 1s ease-in;
+}
+
+#word {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.form-section input {
+  max-width: 400px;
+  margin: auto;
+  font-size: 1.3rem;
+  border: 2px solid #ffc107;
+  box-shadow: 0 0 10px #ffc10750;
+}
+
+.stat-box h3 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.instruction-card {
+  background-color: #212529;
+  border: 2px dashed #ffc107;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+  animation: fadeInUp 1s ease-in;
+}
+
+.instruction-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.instruction-card li {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+}
+
+.flash {
+  animation: pulse 1s infinite alternate;
+}
+
+/* Animations */
+@keyframes pulse {
+  from {
+    color: #ffc107;
+  }
+  to {
+    color: #fff;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/*Button*/
+
+.yellow-btn {
+  background-color: #ffc107; /* Bootstrap's warning/yellow */
+  color: #282921;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+  transition: all 0.3s ease;
+}
+
+.yellow-btn:hover {
+  background-color: #e0a800;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.5);
+  transform: translateY(-2px);
+}
+
+
+/*Game Over*/
+
+.red-btn {
+  background-color: #dc3545; /* Bootstrap's danger/red */
+  color: #fff5f5;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+  transition: all 0.3s ease;
+}
+
+.red-btn:hover {
+  background-color: #bb2d3b;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.5);
+  transform: translateY(-2px);
+}
+
+
