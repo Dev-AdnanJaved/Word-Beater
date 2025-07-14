@@ -25,9 +25,10 @@
 
   <main class="container text-center mt-5">
     <h3 class="fw-bold">Type the word within <span class="text-warning flash">5</span> seconds!</h3>
-
+  
+    <!-- Word -->
     <div id="word-box" class="mt-2">
-      <h1 id="word"></h1>
+      <h1 id="word">Word</h1>
     </div>
 
     <div class="form-section mt-4">
@@ -35,15 +36,21 @@
       <input type="text" id="input" class="form-control form-control-lg text-center" placeholder="Enter word here..." autofocus />
     </div>
 
-    <div class="container btn-yellow btn-yellow- btn text-danger mt-4" >
+    <div id="over-div" class="container btn-yellow text-danger mt-4" >
         <h3 id="over"></h3>
     </div>
 
-       <div class="container text-warning mt-4" >
+       <div class="container text-warning mt-2" >
         <h4 id="wrong"></h4>
     </div>
-
-    <div id="btn-div" class="container"></div>
+     
+    <!-- for Start button -->
+    <div id ="start-div" class="container">
+      <button id="start-Btn" class="start-btn">Start</button>
+    </div>
+    
+ <!-- For restart Button -->
+    <div id="btn-div" class="container mt-4"></div>
 
       
 
@@ -60,6 +67,8 @@
           <h5 >Score</h5>
           <h3 id="score" class="text-success">0</h3>
         </div>
+
+        
       </div>
     </div>
 
