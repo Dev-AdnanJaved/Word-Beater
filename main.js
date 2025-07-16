@@ -1,8 +1,7 @@
-let start = document.getElementById('start-Btn');
-
 //MAking Input Field Disable
 document.getElementById('input').disabled = true;
 
+let start = document.getElementById('start-Btn');
 
 
 
@@ -13,7 +12,7 @@ document.addEventListener('DOMContentLoaded', (() => {
         document.getElementById('input').disabled = false;
         document.getElementById('start-div').innerHTML = "";
         document.getElementById('score').textContent = 0;
-         newScore = 0;
+        newScore = 0;
         startTimer();
         arrayWord();
     }))
@@ -45,17 +44,21 @@ let over = document.getElementById('over');
 
 
 const words = [
-    "Planet", "Rocket", "Puzzle", "Guitar", "Spirit",
-    "Bright", "Travel", "Jumper", "Circle", "Monkey",
-    "Orange", "Button", "Castle", "Spring", "Target",
-    "Breeze", "Window", "School", "Laptop", "Bridge",
-    "Tunnel", "Friend", "Forest", "Silver", "Drawer",
-    "Doctor", "Wizard", "Battle", "Candle", "Remote",
-    "Golden", "Flight", "Bounty", "Strong", "Danger",
-    "Motion", "Simple", "Action", "Holder", "Desert",
-    "Hunter", "Trophy", "Garden", "Device", "Report",
-    "Bucket", "Secret", "Couple", "Bottle", "Runner"
+  "basketball", "brainstorm", "complicated", "background",
+  "wavelengths", "lighthouse", "houseplant", "playground",
+  "blindsided", "refreshment", "volleyball", "chalkboard",
+  "timekeeper", "dishwasher", "middlemost", "journalism",
+  "goalscorer", "agriculture", "noticeable", "frameworks",
+  "schoolmate", "earthquake", "speedlight", "bookmarked",
+  "subheading", "undertaker", "fingerpick", "daydreamer",
+  "brainpower", "livelihood", "librarians", "everything",
+  "background", "battlezone", "multiplayer", "strawberry",
+  "narratives", "stationary", "controllers", "motorcycle",
+  "spaceships", "storefront", "skateboard", "projectors",
+  "crossroads", "aftershock", "fundraiser", "underrated",
+  "sweetheart", "rattlesnake"
 ];
+
 
 
 //Generate a random index for Array
