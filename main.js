@@ -141,7 +141,7 @@ function checkWord(e) {
 
         else {
 
-            input.value = "";
+            // input.value = "";
             wrong_Word.textContent = "Wrong Word";
         }
 
