@@ -44,19 +44,16 @@ let over = document.getElementById('over');
 
 
 const words = [
-  "basketball", "brainstorm", "complicated", "background",
-  "wavelengths", "lighthouse", "houseplant", "playground",
-  "blindsided", "refreshment", "volleyball", "chalkboard",
-  "timekeeper", "dishwasher", "middlemost", "journalism",
-  "goalscorer", "agriculture", "noticeable", "frameworks",
-  "schoolmate", "earthquake", "speedlight", "bookmarked",
-  "subheading", "undertaker", "fingerpick", "daydreamer",
-  "brainpower", "livelihood", "librarians", "everything",
-  "background", "battlezone", "multiplayer", "strawberry",
-  "narratives", "stationary", "controllers", "motorcycle",
-  "spaceships", "storefront", "skateboard", "projectors",
-  "crossroads", "aftershock", "fundraiser", "underrated",
-  "sweetheart", "rattlesnake"
+  "Apple", "banana", "Candle", "circle", "Donkey", "eagle", "Fairy", "garden", "Honey", "island",
+  "Jungle", "kitten", "Lemon", "monkey", "Needle", "orange", "Puppy", "quartz", "Rabbit", "sugar",
+  "Tiger", "unicorn", "Violet", "window", "Yellow", "zebra", "Bubble", "button", "Cactus", "cloudy",
+  "Dragon", "eleven", "Flower", "guitar", "Hammer", "icicle", "Jacket", "karate", "Ladder", "magnet",
+  "Napkin", "ocean", "Pillow", "quiver", "Rocket", "sunset", "Ticket", "umbrella", "Violet", "walnut",
+  "Yogurt", "anchor", "Bridge", "castle", "Danger", "engine", "Fabric", "gloves", "Helmet", "insect",
+  "Jungle", "kidney", "Laptop", "mirror", "Napkin", "object", "Pickle", "quartz", "Rabbit", "salmon",
+  "Temple", "update", "Valley", "wallet", "Yonder", "zenith", "Animal", "border", "Camera", "desert",
+  "Effort", "friend", "Gentle", "honest", "Ignore", "jungle", "Kindly", "legend", "Moment", "nature",
+  "Office", "planet", "Quietly", "rescue", "Silent", "travel", "United", "vacuum", "Whales", "zombie"
 ];
 
 
