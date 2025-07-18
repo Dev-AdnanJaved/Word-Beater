@@ -114,7 +114,7 @@ body {
 /*Button*/
 
 .yellow-btn {
-  background-color: #ffc107; /* Bootstrap's warning/yellow */
+  background-color: #ffc107; 
   color: #282921;
   font-weight: 700;
   font-size: 1.5rem;
@@ -136,7 +136,7 @@ body {
 /*Game Over*/
 
 .red-btn {
-  background-color: #dc3545; /* Bootstrap's danger/red */
+  background-color: #dc3545; 
   color: #fff5f5;
   font-weight: 700;
   font-size: 1.5rem;
@@ -156,6 +156,7 @@ body {
 
 /* Start Button */
 .start-btn {
+  margin-top: -30px;
    font-family: 'Outfit', sans-serif;
   font-weight: 900;
   padding: 14px 25px;
@@ -190,4 +191,117 @@ body {
 .container {
   text-align: center;
   margin-top: 50px;
+}
+
+/* For difficulty Levels */
+
+.difficulty-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.difficulty-btn {
+  min-width: 140px;
+}
+
+.easy-btn {
+  background-color: #ffc107; 
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+  transition: all 0.3s ease;
+}
+
+.medium-btn {
+  background-color: #2600ff; 
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hard-btn {
+
+  background-color: #dc3545; 
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Change shade of Clicked button */
+
+.selected {
+  background-color: #28a745;
+  color: white;
+  outline: 2px solid rgb(0, 248, 8);
+  position: relative;
+}
+
+/* Add tick mark */
+.selected::after {
+  /* outline: 2px solid rgb(0, 248, 8); */
+  content: '✔';
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  font-size: 20px;
+  font-weight: bold; /* fixed */
+  color: rgb(86, 210, 86);
+  
+}
+
+#select-difficulty {
+  /* background-color: #ffc107;  */
+  margin-top: 30px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3); */
+  /* transition: all 0.3s ease; */
+}
+
+
+
+
+/* setting Icon */
+
+.setting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #ffc107;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-left: 800px;
+  cursor: pointer;
+}
+
+
+/* Hiding setting section */
+
+.hidden {
+  display: none;
 }

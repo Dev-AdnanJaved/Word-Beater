@@ -33,17 +33,40 @@
 
     <div class="form-section mt-4">
       <label for="input" class="form-label text-light">Start Typing:</label>
-      <input type="text" id="input" class="form-control form-control-lg text-center" placeholder="Enter word here..." autofocus />
+      <input type="text" id="input" class="form-control form-control-lg text-center" autocomplete="off" placeholder="Enter word here..." autofocus />
     </div>
 
+    <!-- Game Over -->
     <div id="over-div" class="container btn-yellow text-danger mt-4" >
         <h3 id="over"></h3>
     </div>
-
+    <!-- Wrong Word -->
        <div class="container text-warning mt-2" >
         <h4 id="wrong"></h4>
     </div>
+
+    <!-- Setting Icon -->
+
+    <div class="setting">
+      <img src="assets/setting.png" style="width: 35px;" alt="" class="icon">
+    </div>
      
+        <!-- Difficulty Levels -->
+        <div class="hidden">   <!-- hide setting section -->
+     <div class="container diffculty-btns">
+    <h1 class="title">Choose Difficulty</h1>
+    <p class="subtitle">Pick a challenge level to begin the game</p>
+
+    <div class="difficulty-buttons">
+      <button class="easy-btn difficulty-btn"  data-difficulty = "easy">Easy</button>
+      <button class="medium-btn difficulty-btn" data-difficulty = "medium">Medium</button>
+      <button class="hard-btn difficulty-btn" data-difficulty = "hard">Hard</button>
+    </div>
+
+    <div id="select-difficulty"></div>
+  </div>
+  </div>
+  
     <!-- for Start button -->
     <div id ="start-div" class="container">
       <button id="start-Btn" class="start-btn">Start</button>
@@ -80,6 +103,10 @@
         <li><strong class="text-warning">3:&nbsp;&nbsp;</strong> After Restarting, Score will become Zero</li>
       </ul>
     </div>
+
+
+
+
   </main>
 
   <script src="main.js"></script>

@@ -1,24 +1,43 @@
-//MAking Input Field Disable
-document.getElementById('input').disabled = true;
+const easy = [
+  "Apple", "ball", "Cat", "dog", "egg", "Fish", "goat", "Hat", "ice", "Jam",
+  "kite", "Lamp", "man", "Net", "owl", "Pen", "queen", "Rat", "Sun", "Toy",
+  "Umbrella", "van", "Water", "xray", "Yak", "Zebra", "air", "bed", "Cup", "desk",
+  "Ear", "fan", "Game", "hand", "ink", "Jar", "King", "leaf", "Milk", "nose",
+  "Open", "Pig", "Quiz", "Red", "star", "Tree", "Under", "vase", "Wall", "xylophone",
+  "yarn", "Zoo", "arch", "Blue", "cheese", "drum", "Enter", "fast", "gift", "high",
+  "iron", "Joke", "key", "line", "Moon", "nine", "orange", "plate", "Quick", "run",
+  "snow", "top", "use", "voice", "win", "xmas", "yummy", "zero", "angel", "block",
+  "chair", "dream", "east", "flag", "gold", "hill", "icecream", "jump", "kind", "lake",
+  "mouse", "nail", "Open", "park", "quiet", "rain", "stone", "Tent", "unit", "vote"
+];
+const medium = [
+  "Beacon", "bottle", "Canvas", "Danger", "Effort", "frozen", "Gadget", "Handle", "Island", "Journey",
+  "Kernel", "laptop", "Mission", "Notion", "Option", "Puzzle", "Quarter", "Rocket", "Signal", "Tunnel",
+  "Unique", "Vision", "Wonder", "Xenon", "Yield", "Zipper", "Aspect", "border", "Cancel", "Design",
+  "Engine", "forest", "Glider", "Helmet", "impact", "Jungle", "Knight", "Ladder", "Mirror", "notice",
+  "Output", "Planet", "Quest", "Radius", "Sketch", "Target", "Update", "Volume", "Whisper", "Xtreme",
+  "Yogurt", "Zealot", "Access", "Backup", "Circle", "Divide", "Energy", "Fancy", "Giant", "Hostel",
+  "ignore", "Justice", "Kettle", "Launch", "Manage", "Normal", "Option", "Pilot", "Quote", "Reboot",
+  "Stable", "Theory", "Upload", "Visual", "Widget", "Xpress", "Yielded", "Zealous", "Airport", "Budget",
+  "Cactus", "Driver", "Effort", "Fusion", "Graph", "Hurdle", "Identity", "Jumper", "Keeper", "Lesson",
+  "Motion", "Notice", "Object", "Portal", "Query", "Random", "Stripe", "Thread", "Urgent", "Victory"
+];
 
-let start = document.getElementById('start-Btn');
+const hard = [
+  "Abyss", "Blizzard", "Cryptic", "Drought", "Eclipse", "Friction", "Galaxy", "Hazard", "Inertia", "Junction",
+  "Kryptic", "Labyrinth", "Magnitude", "Nebula", "Oblivion", "Paradox", "Quantum", "Resonance", "Schematic", "Turbulent",
+  "Uncharted", "Vortex", "Wavelength", "Xylotomy", "Yielding", "Zeppelin", "Alchemy", "Bandwidth", "Conundrum", "Derivative",
+  "Empirical", "Fractal", "Gyroscope", "Hyperlink", "Inference", "Jurisdiction", "Keystone", "Longitude", "Momentum", "Nomenclature",
+  "Oscillate", "Phenomenon", "Quarantine", "Retrograde", "Symbiotic", "Topography", "Ubiquity", "Vigilante", "Wanderlust", "Xenolith",
+  "Yearning", "Zygote", "Algorithm", "Binary", "Calibration", "Dissonance", "Equinox", "Flux", "Granular", "Heuristic",
+  "Interpolation", "Juxtapose", "Kaleidoscope", "Logarithmic", "Mythology", "Nonlinear", "Optimization", "Polarize", "Quotient", "Relativity",
+  "Singularity", "Transcend", "Ultrasound", "Vectorial", "Whimsical", "Xenogenesis", "Yonder", "Zealotry", "Abstract", "Breakpoint",
+  "Cognition", "Degenerate", "Ethereal", "Fathomless", "Graviton", "Hologram", "Intuition", "Jetstream", "Knighthood", "Lexicon",
+  "Manifold", "Neutrino", "Obsidian", "Prophecy", "Recursion", "Semantics", "Topology", "Unison", "Variance", "Wavelength"
+];
 
 
-
-
-document.addEventListener('DOMContentLoaded', (() => {
-
-    start.addEventListener('click', (() => {
-        document.getElementById('input').disabled = false;
-        document.getElementById('start-div').innerHTML = "";
-        document.getElementById('score').textContent = 0;
-        newScore = 0;
-        startTimer();
-        arrayWord();
-    }))
-
-}));
-
+let words = [];
 
 
 let randomIndex;
@@ -42,19 +61,86 @@ let wrong_Word = document.getElementById('wrong');
 //Getting Over
 let over = document.getElementById('over');
 
+//MAking Input Field Disable
+document.getElementById('input').disabled = true;
 
-const words = [
-  "Apple", "banana", "Candle", "circle", "Donkey", "eagle", "Fairy", "garden", "Honey", "island",
-  "Jungle", "kitten", "Lemon", "monkey", "Needle", "orange", "Puppy", "quartz", "Rabbit", "sugar",
-  "Tiger", "unicorn", "Violet", "window", "Yellow", "zebra", "Bubble", "button", "Cactus", "cloudy",
-  "Dragon", "eleven", "Flower", "guitar", "Hammer", "icicle", "Jacket", "karate", "Ladder", "magnet",
-  "Napkin", "ocean", "Pillow", "quiver", "Rocket", "sunset", "Ticket", "umbrella", "Violet", "walnut",
-  "Yogurt", "anchor", "Bridge", "castle", "Danger", "engine", "Fabric", "gloves", "Helmet", "insect",
-  "Jungle", "kidney", "Laptop", "mirror", "Napkin", "object", "Pickle", "quartz", "Rabbit", "salmon",
-  "Temple", "update", "Valley", "wallet", "Yonder", "zenith", "Animal", "border", "Camera", "desert",
-  "Effort", "friend", "Gentle", "honest", "Ignore", "jungle", "Kindly", "legend", "Moment", "nature",
-  "Office", "planet", "Quietly", "rescue", "Silent", "travel", "United", "vacuum", "Whales", "zombie"
-];
+let start = document.getElementById('start-Btn');
+
+let difficulty ="";
+
+
+
+document.addEventListener('DOMContentLoaded', (() => {
+
+     
+//Difficulty Level//
+
+document.querySelectorAll('.difficulty-btn').forEach((btn) => {
+  btn.addEventListener("click", getDifficulty);
+})
+
+function getDifficulty(e) {
+  
+  //Removing class Selected from all buttons if exist
+document.querySelectorAll('.difficulty-btn').forEach((btn) => {
+    btn.classList.remove('selected');
+
+    //removing Please difficlty text
+  document.getElementById('select-difficulty').textContent = '';
+
+})
+
+e.target.classList.add('selected')
+
+   difficulty = e.target.dataset.difficulty;
+  // console.log (difficulty);
+}
+
+    start.addEventListener('click', (() => {
+
+ if (!difficulty) {
+ 
+  document.getElementById('select-difficulty').textContent = 'Please Select Difficulty';
+return;
+ }
+
+ else {
+    
+  //removing difficulty buttons//
+  document.querySelector('.diffculty-btns').style.display = 'none' ;
+  
+  //removing Please difficlty text
+  document.getElementById('select-difficulty').textContent = '';
+
+
+
+
+        document.getElementById('input').disabled = false;
+        document.getElementById('start-div').innerHTML = "";
+        document.getElementById('score').textContent = 0;
+        newScore = 0;
+
+         //Autofocus on input Field after restarting
+         input.focus();
+    
+
+
+
+
+//Starting Game
+        startTimer();
+        arrayWord();
+ }
+  }))
+
+})) ;
+
+
+
+
+
+
+
 
 
 
@@ -86,6 +172,10 @@ function startTimer() {
             over.textContent = "Game Over"
             input.disabled = true;
 
+             //Appearing difficulty buttons//
+             document.querySelector('.diffculty-btns').style.display = 'block' ;
+   
+
             document.getElementById('btn-div').innerHTML = `<button id="restart"  class="btn yellow-btn">Restart</button>`
 
             //Getting Restart
@@ -97,10 +187,20 @@ function startTimer() {
 
     }, 1000)
 
+    //Checking difficulty Everytime//
+
+  if (difficulty == "easy") { words = easy };
+  if (difficulty == "medium") { words = medium };
+  if (difficulty == "hard") { words = hard };
+
 }
 
 //restart Function
 function restartEvent() {
+
+  //removing difficulty buttons//
+  document.querySelector('.diffculty-btns').style.display = 'none' ;
+
     over.innerHTML = "";
     wrong_Word.textContent = "";
     input.disabled = false;
@@ -111,6 +211,8 @@ function restartEvent() {
     score.textContent = 0;
     //Remove Start Button
     document.getElementById('btn-div').innerHTML = "";
+    //Autofocus on input Field after restarting
+    input.focus();
 
     startTimer();
     arrayWord();
@@ -141,7 +243,7 @@ function checkWord(e) {
 
         else {
 
-            // input.value = "";
+            input.value = "";
             wrong_Word.textContent = "Wrong Word";
         }
 
