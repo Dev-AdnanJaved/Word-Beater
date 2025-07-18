@@ -61,6 +61,9 @@ let wrong_Word = document.getElementById('wrong');
 //Getting Over
 let over = document.getElementById('over');
 
+//Get Setting Icon//
+// let setting = document.getElementById('setting');
+
 //MAking Input Field Disable
 document.getElementById('input').disabled = true;
 
@@ -72,7 +75,13 @@ let difficulty ="";
 
 document.addEventListener('DOMContentLoaded', (() => {
 
-     
+// //setting icon to hide  and appear difficulty 
+// setting.addEventListener('click', () => {
+//   document.querySelectorAll('.difficulty-btns').forEach(btnGroup => {
+//     btnGroup.classList.toggle('hidden');
+//   });
+// });
+
 //Difficulty Level//
 
 document.querySelectorAll('.difficulty-btn').forEach((btn) => {
